@@ -1,0 +1,19 @@
+runtime:
+  cache_dir: ./.cache/antora
+site:
+  title: Diferencia Docs
+  url: http://lordofthejars.github.io/diferenciadoc 
+  start_page: diferencia::index.adoc
+
+content:
+  sources:
+  - url: https://github.com/lordofthejars/diferencia.git
+    branch: master
+    start_path: docs
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./supplemental-ui
+output:
+  dir: ./docs
