@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diferencia :: Diferencia Docs</title>
-    <link rel="canonical" href="http://lordofthejars.github.io/diferenciadoc/diferencia/0.3.0/index.html">
+    <title>What&amp;#8217;s Next :: Diferencia Docs</title>
+    <link rel="canonical" href="http://lordofthejars.github.io/diferenciadoc/diferencia/0.3.0/what_next.html">
     <meta name="generator" content="Antora 1.0.1">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">  </head>
@@ -45,7 +45,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="diferencia" data-version="0.1.0">
+<div class="navigation-container" data-component="diferencia" data-version="0.3.0">
   <aside class="navigation" role="navigation">
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
@@ -54,7 +54,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Introduction to Diferencia</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -104,11 +104,26 @@
     <a class="nav-link" href="run-diferencia.html#noise">Noise Detection</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">Https</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="prometheus.html">Prometheus</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="run-diferencia.html#configuration">Configuration</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Administration Console</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admin.html#admin-api">API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="what_next.html">What&#8217;s Next</a>
   </li>
 </ul>
@@ -119,20 +134,20 @@
 <div class="navigation-explore" data-panel="explore">
   <div class="context">
     <span class="title">Diferencia</span>
-    <span class="version">0.1.0</span>
+    <span class="version">0.3.0</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <span class="title">Diferencia</span>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="../0.3.0/index.html">0.3.0</a>
+        <li class="version is-current is-latest">
+          <a href="index.html">0.3.0</a>
         </li>
         <li class="version">
           <a href="../0.2.0/index.html">0.2.0</a>
         </li>
-        <li class="version is-current">
-          <a href="index.html">0.1.0</a>
+        <li class="version">
+          <a href="../0.1.0/index.html">0.1.0</a>
         </li>
       </ul>
     </li>
@@ -144,44 +159,40 @@
   <main class="main" role="main">
 <div class="toolbar" role="navigation">
   <button class="navigation-toggle"></button>
-  <a href="../0.3.0/index.html" class="home-link"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="crumbs" role="navigation" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="index.html">Diferencia</a></li>
-    <li class="crumb"><a href="index.html">Introduction to Diferencia</a></li>
+    <li class="crumb"><a href="what_next.html">What&#8217;s Next</a></li>
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="versions-menu-toggle" title="Show other versions of page">0.1.0</button>
+  <button class="versions-menu-toggle" title="Show other versions of page">0.3.0</button>
   <div class="versions-menu">
-    <a class="version" href="../0.3.0/index.html">0.3.0</a>
-    <a class="version" href="../0.2.0/index.html">0.2.0</a>
-    <a class="version is-current" href="index.html">0.1.0</a>
+    <a class="version is-current" href="what_next.html">0.3.0</a>
+    <a class="version" href="../0.2.0/what_next.html">0.2.0</a>
+    <a class="version" href="../0.1.0/what_next.html">0.1.0</a>
   </div>
 </div>
-  <div class="edit-this-page"><a href="https://github.com/lordofthejars/diferencia/blob/v0.1.0/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/lordofthejars/diferencia/blob/v0.3.0/docs/modules/ROOT/pages/what_next.adoc">Edit this Page</a></div>
 </div>
 <article class="doc">
-<h1>Diferencia</h1>
+<h1>What&#8217;s Next</h1>
 <div class="paragraph">
-<p>Diferencia is designed to act as a proxy which intercepts calls to a service and multicast it to several instances of the same service.
-These instances are an old and new version of the service.
-Then when the response is returned from each instance, Diferencia will check if both responses are <em>similar</em> (we will see later what it means <em>similar</em>), and if it is the case, then the two implementations might be considered compatible and the new version implementation is <strong>regression-free</strong>.</p>
+<p>Diferencia is under development so currently only basic features are implemented, for next releases you can expect next additions:</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/diferencia_simple.png" alt="diferencia simple">
-</div>
-<div class="title">Figure 1. Overview of Diferencia</div>
-</div>
-<div class="paragraph">
-<p>In the previous schema, you can see that a request is multicasted to two instances of <em>Service A</em>, one being <strong>V1</strong> and to other <strong>V2</strong>.
-Both return a response and then it is compared by Diferencia.
-Finally, notice that no response is returned but the result (in form of <code>HTTP Status Code</code>).</p>
-</div>
-<div class="paragraph">
-<p>Since Diferencia does not return a real response, but a comparison, effectively means that you need to use Diferencia proxy for testing purposes (to check backward compatibility) and not as a production proxy like Envoy.
-This means that Diferencia might be used to run concrete tests for backward compatibility or using <strong>Traffic Shadowing</strong>/<strong>Mirroring</strong> technique.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Kubernetes integration</p>
+</li>
+<li>
+<p>Dashboard</p>
+</li>
+<li>
+<p>Schema comparision</p>
+</li>
+</ul>
 </div>
 </article>
   </main>
