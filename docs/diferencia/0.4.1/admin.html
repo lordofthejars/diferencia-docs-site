@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Run Docker :: Diferencia Docs</title>
-    <link rel="canonical" href="http://lordofthejars.github.io/diferenciadoc/diferencia/0.4.1/run_docker.html">
+    <title>Administration Console :: Diferencia Docs</title>
+    <link rel="canonical" href="http://lordofthejars.github.io/diferenciadoc/diferencia/0.4.1/admin.html">
     <meta name="generator" content="Antora 1.0.3">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">  </head>
@@ -45,7 +45,7 @@
   </nav>
 </header>
 <div class="main-wrapper">
-<div class="navigation-container" data-component="diferencia" data-version="0.4.0">
+<div class="navigation-container" data-component="diferencia" data-version="0.4.1">
   <aside class="navigation">
     <div class="panels">
 <div class="navigation-menu is-active" data-panel="menu">
@@ -114,7 +114,7 @@
   </li>
 </ul>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="run_docker.html">Run In Docker</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -122,10 +122,10 @@
     <span class="nav-text">Administration Console</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="admin.html#admin-configuration">Configuration</a>
+    <a class="nav-link" href="#admin-configuration">Configuration</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="admin.html#stats-configuration">Stats</a>
+    <a class="nav-link" href="#stats-configuration">Stats</a>
   </li>
 </ul>
   </li>
@@ -149,17 +149,17 @@
 <div class="navigation-explore" data-panel="explore">
   <div class="context">
     <span class="title">Diferencia</span>
-    <span class="version">0.4.0</span>
+    <span class="version">0.4.1</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <span class="title">Diferencia</span>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="../0.4.1/index.html">0.4.1</a>
+        <li class="version is-current is-latest">
+          <a href="index.html">0.4.1</a>
         </li>
-        <li class="version is-current">
-          <a href="index.html">0.4.0</a>
+        <li class="version">
+          <a href="../0.4.0/index.html">0.4.0</a>
         </li>
         <li class="version">
           <a href="../0.3.0/index.html">0.3.0</a>
@@ -188,27 +188,28 @@
   <main class="main">
 <div class="toolbar" role="navigation">
   <button class="navigation-toggle"></button>
-  <a href="../0.4.1/index.html" class="home-link"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="index.html">Diferencia</a></li>
-    <li class="crumb"><a href="run_docker.html">Run In Docker</a></li>
+    <li class="crumb">Administration Console</li>
+    <li class="crumb"><a href="#admin-configuration">Configuration</a></li>
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="versions-menu-toggle" title="Show other versions of page">0.4.0</button>
+  <button class="versions-menu-toggle" title="Show other versions of page">0.4.1</button>
   <div class="versions-menu">
-    <a class="version" href="../0.4.1/run_docker.html">0.4.1</a>
-    <a class="version is-current" href="run_docker.html">0.4.0</a>
-    <a class="version is-missing" href="../0.3.0/index.html">0.3.0</a>
+    <a class="version is-current" href="admin.html">0.4.1</a>
+    <a class="version" href="../0.4.0/admin.html">0.4.0</a>
+    <a class="version" href="../0.3.0/admin.html">0.3.0</a>
     <a class="version is-missing" href="../0.2.0/index.html">0.2.0</a>
     <a class="version is-missing" href="../0.1.0/index.html">0.1.0</a>
   </div>
 </div>
-  <div class="edit-this-page"><a href="https://github.com/lordofthejars/diferencia/blob/v0.4.0/docs/modules/ROOT/pages/run_docker.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/lordofthejars/diferencia/blob/v0.4.1/docs/modules/ROOT/pages/admin.adoc">Edit this Page</a></div>
 </div>
 <article class="doc">
-<h1>Run Docker</h1>
+<h1>Administration Console</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -217,44 +218,221 @@
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p><i class="fa fa-check-square-o"></i> You have a Docker host (or Kubernetes cluster) to deploy image</p>
+<p><i class="fa fa-check-square-o"></i> You have Diferencia running (in case of Docker with admin port exposed). Default admin port is <code>8082</code>.</p>
 </li>
 </ul>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-This Docker image can be run in OpenShift since does not run with <code>root</code> privileges.
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_start_docker_container"><a class="anchor" href="#_start_docker_container"></a>Start Docker Container</h2>
+<h2 id="admin-configuration"><a class="anchor" href="#admin-configuration"></a>Configuration</h2>
 <div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+By default the admin console is listening port <code>8082</code> but it can be configured by using <code>--adminPort</code> argument.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_rest_api"><a class="anchor" href="#_rest_api"></a>Rest API</h3>
+<div class="sect3">
+<h4 id="_getting_configuration"><a class="anchor" href="#_getting_configuration"></a>Getting Configuration</h4>
 <div class="paragraph">
-<p>Diferencia is also provided as Docker image.</p>
+<p>Diferencia has an administration console that can be accessed as a Rest API to get configuration values.
+To get it you need to use <code>GET</code> http method to <code>/configuration</code> endpoint to given host and configured port.</p>
 </div>
 <div class="paragraph">
-<p>For example:</p>
+<p>The JSON document of response is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "port": 8080,
+  "serviceName": "now.httpbin.org",
+  "primary": "http://now.httpbin.org/",
+  "secondary": "http://now.httpbin.org",
+  "candidate": "http://now.httpbin.org/",
+  "prometheusPort": 8081,
+  "adminPort": 8082
+  ... <i class="conum" data-value="1"></i><b>(1)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>All configuration parameters are exposed using camel case.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_updating_configuration"><a class="anchor" href="#_updating_configuration"></a>Updating Configuration</h4>
+<div class="paragraph">
+<p>Diferencia has an administration console that can be accessed as a Rest API to configure some of the Diferencia parameters without having to restart it.
+At this time these parameters are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>serviceName</p>
+</li>
+<li>
+<p>primary</p>
+</li>
+<li>
+<p>candidate</p>
+</li>
+<li>
+<p>secondary</p>
+</li>
+<li>
+<p>noise detection</p>
+</li>
+<li>
+<p>mode</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><span class="icon"><i class="fa fa-terminal"></i></span> <code>docker run -ti --rm lordofthejars/diferencia:&lt;version&gt; start --help</code></p>
+<p>To update any of the parameters you only need to send a JSON document using <code>PUT</code> http method to <code>/configuration</code> endpoint to given host and configured port.</p>
 </div>
 <div class="paragraph">
-<p>It will print the helper message.</p>
+<p>The JSON document must follow next schema:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "serviceName" : "",
+  "primary" : "",
+  "secondary" : "",
+  "candidate" : "",
+  "secondary" : "",
+  "noiseDetection" : "", <i class="conum" data-value="1"></i><b>(1)</b>
+  "mode" : "" <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Noise Detection valid values is: <code>Strict</code>, <code>Subset</code> and <code>Schema</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Boolean as string <code>true</code> or <code>false</code></td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can set all parameters to be updated in the document, and all of them will be updated at once. It is not necessary to send N requests one for each change.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/confupdate.png" alt="confupdate">
+</div>
+<div class="title">Figure 1. Update Noise Cancellation with Insomnia</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dashboard"><a class="anchor" href="#_dashboard"></a>Dashboard</h3>
+<div class="paragraph">
+<p>You can access to Dashboard using a browser to have a web view of basic configuration parameters.
+You need to access to <code>/dashboard/</code> and a dashboard web page with error endpoints is shown.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="stats-configuration"><a class="anchor" href="#stats-configuration"></a>Stats</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_rest_api_2"><a class="anchor" href="#_rest_api_2"></a>Rest API</h3>
+<div class="sect3">
+<h4 id="_getting_stats"><a class="anchor" href="#_getting_stats"></a>Getting Stats</h4>
+<div class="paragraph">
+<p>Diferencia collects stats of the failing endpoints so you can get which endpoints are failing and how many times they have failed.
+In future, these stats can be improved offering more information, for now it just offers basic information.</p>
 </div>
 <div class="paragraph">
-<p>If you want to start Diferencia to start capturing traffic and redirecting to seconday and candidate hosts, you only need to do:</p>
+<p>To get stats you only need to use <code>GET</code> http method to <code>/stats</code> endpoint to given host and configured port.</p>
 </div>
 <div class="paragraph">
-<p><code>docker run --rm -ti -p 8080:8080 -p 8081:8081 -p 8082:8082 lordofthejars/diferencia start -c <a href="http://now.httpbin.org/" class="bare">http://now.httpbin.org/</a> -p <a href="http://now.httpbin.org/" class="bare">http://now.httpbin.org/</a></code></p>
+<p>And the response is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+	{
+		"endpoint": {
+			"method": "GET", <i class="conum" data-value="1"></i><b>(1)</b>
+			"path": "/" <i class="conum" data-value="2"></i><b>(2)</b>
+		},
+		"errors": 5 <i class="conum" data-value="3"></i><b>(3)</b>
+	}
+]</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Http method used in request</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Path used to replicate</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Number of errors</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only endpoints with errors are returned, if there is no errors then empy array is returned.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/stats.png" alt="stats">
+</div>
+<div class="title">Figure 2. Stats call with Insomnia</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dashboard_2"><a class="anchor" href="#_dashboard_2"></a>Dashboard</h3>
+<div class="paragraph">
+<p>You can access to Dashboard using a browser to have a web view of what&#8217;s happening in Diferencia.
+You need to access to <code>/dashboard/</code> and a dashboard web page with error endpoints is shown.</p>
+</div>
 </div>
 </div>
 </div>
