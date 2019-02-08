@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Arquillian Diferencia :: Diferencia Docs</title>
+    <link rel="canonical" href="http://lordofthejars.github.io/diferenciadoc/diferencia-java/0.6.0/arquillian/using.html">
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="#">Diferencia</a>
+        <span class="separator">//</span>
+        <a href="http://lordofthejars.github.io/diferenciadoc">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Project</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>GitHub</strong></div>
+            <a class="navbar-item" href="https://github.com/lordofthejars/diferencia">Diferencia Repository</a>
+            <a class="navbar-item" href="https://github.com/lordofthejars/diferencia/issues">Diferencia Issue Tracker</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/alexsotob">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="diferencia-java" data-version="0.6.0">
+  <aside class="navigation">
+    <div class="panels">
+<div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Diferencia Java</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Introduction to Diferencia Java</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../core/overview.html">Core</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../core/using.html">Using Core</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/using.html#installation">Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/using.html#code-example">Example</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/admin.html">Admin Client</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../junit/overview.html">JUnit 4</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../junit/using.html">Using with JUnit 4</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../junit/using.html#installation">Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../junit/using.html#code-example">Example</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../junit5/overview.html">JUnit 5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../junit5/using.html">Using with JUnit 5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../junit5/using.html#installation">Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../junit5/using.html#code-example">Example</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="overview.html">Arquillian Diferencia</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="using.html">Using with Arquillian Diferencia</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#installation">Install</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="#code-example">Example</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#standalone-mode">Standalone Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#incontainer-mode">In-Container Mode</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#enrichers">Enrichers</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../assertj/overview.html">AssertJ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../assertj/using.html">Using with AssertJ Assertions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../assertj/using.html#installation">Install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../assertj/using.html#code-example">Example</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Diferencia Java</span>
+    <span class="version">0.6.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Diferencia</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../diferencia/0.6.0/index.html">0.6.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../diferencia/0.5.0/index.html">0.5.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../diferencia/0.4.1/index.html">0.4.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../diferencia/0.4.0/index.html">0.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../diferencia/0.3.0/index.html">0.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../diferencia/0.2.0/index.html">0.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../diferencia/0.1.0/index.html">0.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Diferencia Java</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.6.0</a>
+        </li>
+        <li class="version">
+          <a href="../../0.5.0/index.html">0.5.0</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.0/index.html">0.4.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../diferencia/0.6.0/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Diferencia Java</a></li>
+    <li class="crumb"><a href="overview.html">Arquillian Diferencia</a></li>
+    <li class="crumb"><a href="using.html">Using with Arquillian Diferencia</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">0.6.0</button>
+  <div class="versions-menu">
+    <a class="version is-current" href="using.html">0.6.0</a>
+    <a class="version" href="../../0.5.0/arquillian/using.html">0.5.0</a>
+    <a class="version" href="../../0.4.0/arquillian/using.html">0.4.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/lordofthejars/diferencia-java/blob/v0.6.0/docs/modules/arquillian/pages/using.adoc">Edit this Page</a></div>
+</div>
+<article class="doc">
+<h1>Using Arquillian Diferencia</h1>
+<div class="sect1">
+<h2 id="installation"><a class="anchor" href="#installation"></a>Installing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To install Arquillian Diferencia you need to add <code>Arquillian</code> dependencies (this would depend on if you are using <em>in-container</em> or <em>standalone</em> mode, containers, &#8230;&#8203;) and <code>Arquillian Diferencia</code> dependency on your build tool.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In case of using the <em>in-container</em> approach we recommend you using Arquillian Chameleon to manage containers in an easy way: <a href="https://github.com/arquillian/arquillian-container-chameleon" class="bare">https://github.com/arquillian/arquillian-container-chameleon</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_maven"><a class="anchor" href="#_maven"></a>Maven</h3>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+  &lt;groupId&gt;com.lordofthejars.diferencia&lt;/groupId&gt;
+  &lt;artifactId&gt;diferencia-java-arquillian-core&lt;/artifactId&gt;
+  &lt;version&gt;${project.version}&lt;/version&gt;
+  &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gradle"><a class="anchor" href="#_gradle"></a>Gradle</h3>
+<div class="listingblock">
+<div class="title">build.gradle</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">testCompile "com.lordofthejars.diferencia:diferencia-java-arquillian-core:${version}"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code-example"><a class="anchor" href="#code-example"></a>Code Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, we are going to cover three examples, one in <em>standalone</em> mode and two with <em>in-container</em> mode.</p>
+</div>
+<div class="paragraph">
+<p>In case of <em>in-container</em> mode, <a href="https://github.com/arquillian/arquillian-container-chameleon">Arquillian Chameleon</a> is used to simplify the configuration of Arquillian.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Arquillian Diferencia only works when the test runs <em>in-container</em> mode <strong>as client</strong> or in <em>standalone</em> mode.</p>
+</div>
+<div class="paragraph">
+<p>In case of <em>in-container</em> you need to annotate test class with <code>@RunAsClient</code> and annotate deployable method <code>@Deployment(testable = false)</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="standalone-mode"><a class="anchor" href="#standalone-mode"></a>Standalone Mode</h3>
+<div class="paragraph">
+<p>In standalone mode, Arquillian does not deploy any service but assumes that other systems like build tools or CI/CD system already done it.
+For this reason, you need to configure Diferencia with primary, candidate (and secondary) URLs in <code>arquillian.xml</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="_adding_dependencies"><a class="anchor" href="#_adding_dependencies"></a>Adding dependencies</h4>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+  &lt;groupId&gt;junit&lt;/groupId&gt;
+  &lt;artifactId&gt;junit&lt;/artifactId&gt;
+  &lt;version&gt;4.12&lt;/version&gt;
+  &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.jboss.arquillian.junit&lt;/groupId&gt;
+  &lt;artifactId&gt;arquillian-junit-standalone&lt;/artifactId&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+  &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;com.lordofthejars.diferencia&lt;/groupId&gt;
+  &lt;artifactId&gt;diferencia-java-arquillian-core&lt;/artifactId&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+  &lt;version&gt;${version}&lt;/version&gt;
+  &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Arquillian Standalone mode dependency</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Arquillian Diferencia dependency</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuring_arquillian_diferencia"><a class="anchor" href="#_configuring_arquillian_diferencia"></a>Configuring Arquillian Diferencia</h4>
+<div class="paragraph">
+<p>All Diferencia configuration properties are available in <code>arquillian.xml</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">src/test/resources/arquillian.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0"?&gt;
+&lt;arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://jboss.org/schema/arquillian"
+    xsi:schemaLocation="http://jboss.org/schema/arquillian
+    http://jboss.org/schema/arquillian/arquillian_1_0.xsd"&gt;
+
+  &lt;extension qualifier="diferencia"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;property name="primary"&gt;http://now.httpbin.org/&lt;/property&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;property name="candidate"&gt;http://now.httpbin.org/&lt;/property&gt;
+  &lt;/extension&gt;
+
+&lt;/arquillian&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Configures Diferencia extension</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Static URLs</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_test"><a class="anchor" href="#_test"></a>Test</h4>
+<div class="paragraph">
+<p>The test looks like any other Arquillian standalone test.
+Arquillian Diferencia starts Diferencia before running tests and stops it after the execution of them.</p>
+</div>
+<div class="listingblock">
+<div class="title">HttpBinNowArquillianTest.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RunWith(Arquillian.class) <i class="conum" data-value="1"></i><b>(1)</b>
+public class HttpBinNowArquillianTest {
+
+    @DiferenciaUrl <i class="conum" data-value="2"></i><b>(2)</b>
+    URL diferencia;
+
+    @Test
+    public void should_use_diferencia_to_detect_any_possible_regression() throws IOException {
+
+        // Given
+        final OkHttpClient client = new OkHttpClient();
+
+        // When
+        final Response response = sendRequest(diferencia.toExternalForm(), "/", client); <i class="conum" data-value="3"></i><b>(3)</b>
+
+        // Then
+        assertThat(response.code()).isEqualTo(HttpURLConnection.HTTP_PRECON_FAILED); <i class="conum" data-value="4"></i><b>(4)</b>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Arquillian runner</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Enrich Diferencia URL location to connect</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Send request to Diferencia server</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>In this test a failure is expected</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="incontainer-mode"><a class="anchor" href="#incontainer-mode"></a>In-Container Mode</h3>
+<div class="paragraph">
+<p>In-Container mode, Arquillian takes care of deploying and undeploying applications.
+Arquillian Diferencia integrates with it by allowing you to set as primary, candidate (and secondary) a deployment name, and URL to the service is resolved at runtime.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In case of the <em>In-container</em> you need to annotate test class with <code>@RunAsClient</code> and annotate deployable method <code>@Deployment(testable = false)</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">About Auto-Resolution</div>
+<div class="paragraph">
+<p>If your test only contains one deployment method, this deployment will be considered to be the <em>candidate</em> so you don&#8217;t need to specify anything in <code>candidate configuration property</code> since it is automatically resolved.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_adding_dependencies_2"><a class="anchor" href="#_adding_dependencies_2"></a>Adding dependencies</h4>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+  &lt;groupId&gt;junit&lt;/groupId&gt;
+  &lt;artifactId&gt;junit&lt;/artifactId&gt;
+  &lt;version&gt;4.12&lt;/version&gt;
+  &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.arquillian.container&lt;/groupId&gt;
+  &lt;artifactId&gt;arquillian-container-chameleon&lt;/artifactId&gt;
+  &lt;version&gt;1.0.0.CR2&lt;/version&gt;
+  &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.jboss.arquillian.junit&lt;/groupId&gt;
+  &lt;artifactId&gt;arquillian-junit-container&lt;/artifactId&gt;
+  &lt;version&gt;1.2.0.Final&lt;/version&gt;
+  &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.arquillian.container&lt;/groupId&gt;
+  &lt;artifactId&gt;arquillian-container-chameleon-runner&lt;/artifactId&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+  &lt;version&gt;1.0.0.CR2&lt;/version&gt;
+  &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;com.lordofthejars.diferencia&lt;/groupId&gt;
+  &lt;artifactId&gt;diferencia-java-arquillian-core&lt;/artifactId&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+  &lt;version&gt;${project.version}&lt;/version&gt;
+  &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Arquillian Chameleon dependency for in-container tests</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Arquillian Diferencia dependency</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuring_arquillian_diferencia_with_one_deployment"><a class="anchor" href="#_configuring_arquillian_diferencia_with_one_deployment"></a>Configuring Arquillian Diferencia with One Deployment</h4>
+<div class="paragraph">
+<p>All Diferencia configuration properties are available in <code>arquillian.xml</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">src/test/resources/arquillian.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0"?&gt;
+&lt;arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://jboss.org/schema/arquillian"
+    xsi:schemaLocation="http://jboss.org/schema/arquillian
+    http://jboss.org/schema/arquillian/arquillian_1_0.xsd"&gt;
+
+  &lt;extension qualifier="diferencia"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;property name="primary"&gt;http://mypublicsite.com/&lt;/property&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;property name="port"&gt;9090&lt;/property&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+  &lt;/extension&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+
+&lt;/arquillian&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Configures Diferencia extension</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Static URL for primary</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Port where Diferencia server is started</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>No candidate set because test only contains one deployment to be used as candidate</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_test_with_one_deployment"><a class="anchor" href="#_test_with_one_deployment"></a>Test with One Deployment</h4>
+<div class="paragraph">
+<p>In the next test, Diferencia makes a request to defined primary host at <code>arquillian.xml</code> (<code><a href="http://mypublicsite.com/" class="bare">http://mypublicsite.com/</a></code>) and the service defined at <code>deployServiceV11()</code> method.</p>
+</div>
+<div class="listingblock">
+<div class="title">DiferenciaContainerTest.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RunWith(ArquillianChameleon.class) <i class="conum" data-value="1"></i><b>(1)</b>
+@ChameleonTarget("wildfly:11.0.0.Final:managed") <i class="conum" data-value="2"></i><b>(2)</b>
+@RunAsClient <i class="conum" data-value="3"></i><b>(3)</b>
+public class DiferenciaContainerTest {
+
+    @Deployment(testable = false) <i class="conum" data-value="4"></i><b>(4)</b>
+    public static WebArchive deployServiceV11() {
+        return ShrinkWrap.create(WebArchive.class)
+            .addClasses(V1Application.class, V11Resource.class); <i class="conum" data-value="5"></i><b>(5)</b>
+    }
+
+    @DiferenciaUrl
+    URL diferencia;
+
+    @Test
+    public void should_fail_if_responses_are_different() throws IOException {
+        // Given
+        final OkHttpClient client = new OkHttpClient();
+
+        // When
+        final Response response = sendRequest(diferencia.toExternalForm(), "/v1/hello", client); <i class="conum" data-value="6"></i><b>(6)</b>
+
+        // Then
+        assertThat(response.code()).isEqualTo(HttpURLConnection.HTTP_PRECON_FAILED);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Arquillian Chameleon runner</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines the container where the serivce is deployed</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><code>RunAsClient</code> is mandatory in in-container tests for working with Diferencia</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><code>testeable = false</code> is mandatory in in-container tests for working with Diferencia</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Bundle of the service</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Send request to Diferencia server</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When executing this test, Arquillian Diferencia starts Diferencia server and resend request to <em>primary</em> and <em>candidate</em>.
+The important thing is that in this case <em>candidate</em> URL is auto-resolved to the service deployed by Arquillian.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuring_arquillian_diferencia_with_multiple_deployments"><a class="anchor" href="#_configuring_arquillian_diferencia_with_multiple_deployments"></a>Configuring Arquillian Diferencia with Multiple Deployments</h4>
+<div class="listingblock">
+<div class="title">src/test/resources/arquillian.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0"?&gt;
+&lt;arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://jboss.org/schema/arquillian"
+    xsi:schemaLocation="http://jboss.org/schema/arquillian
+    http://jboss.org/schema/arquillian/arquillian_1_0.xsd"&gt;
+
+  &lt;extension qualifier="diferencia"&gt;
+    &lt;property name="primary"&gt;v1&lt;/property&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;property name="candidate"&gt;v11&lt;/property&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;property name="port"&gt;9090&lt;/property&gt;
+  &lt;/extension&gt;
+
+&lt;/arquillian&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Primary field is resolved with a deployment called <code>v1</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Candidate field is resolved with a deployment called <code>v11</code></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_test_with_multiple_deployments"><a class="anchor" href="#_test_with_multiple_deployments"></a>Test with Multiple Deployments</h4>
+<div class="listingblock">
+<div class="title">DiferenciaContainerTest.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RunWith(ArquillianChameleon.class)
+@ChameleonTarget("wildfly:11.0.0.Final:managed")
+@RunAsClient
+public class DiferenciaContainerTest {
+
+    @Deployment(testable = false, name = "v1") <i class="conum" data-value="1"></i><b>(1)</b>
+    public static WebArchive deployServiceV1() {
+        return ShrinkWrap.create(WebArchive.class)
+            .... <i class="conum" data-value="2"></i><b>(2)</b>
+    }
+
+    @Deployment(testable = false, name = "v11") <i class="conum" data-value="3"></i><b>(3)</b>
+    public static WebArchive deployServiceV11() {
+        return ShrinkWrap.create(WebArchive.class)
+            .addClasses(V1Application.class, V11Resource.class);
+    }
+
+    @DiferenciaUrl
+    URL diferencia;
+
+    @Test
+    public void should_fail_if_responses_are_different() throws IOException {
+        // Given
+        final OkHttpClient client = new OkHttpClient();
+
+        // When
+        final Response response = sendRequest(diferencia.toExternalForm(), "/v1/hello", client); <i class="conum" data-value="3"></i><b>(3)</b>
+
+        // Then
+        assertThat(response.code()).isEqualTo(HttpURLConnection.HTTP_PRECON_FAILED);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Primary deployment</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>WebArchive</code> could be an specific version of <code>.war</code> file from a concrete artifact repository</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Candidate deployment</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When executing this test, Arquillian Diferencia starts Diferencia server and resend the request to <em>primary</em> and <em>candidate</em>.
+The important thing is that in this case <em>primary</em> and <em>candidate</em> URLs are auto-resolved to the service deployed by Arquillian.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="enrichers"><a class="anchor" href="#enrichers"></a>Enrichers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Arquillian Diferencia offers three kinds of test enrichers:</p>
+</div>
+<div class="paragraph">
+<p>Inject <code>Diferencia</code> instance.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ArquillianResource
+Diferencia diferencia</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inject <code>DiferenciaAdminClient</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ArquillianResource
+DiferenciaAdminClient client;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inject Diferencia <code>URL</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@DiferenciaUrl
+URL diferencia;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>

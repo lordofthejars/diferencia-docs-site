@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Diferencia :: Diferencia Docs</title>
+    <link rel="canonical" href="http://lordofthejars.github.io/diferenciadoc/diferencia/0.6.0/run-diferencia.html">
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="#">Diferencia</a>
+        <span class="separator">//</span>
+        <a href="http://lordofthejars.github.io/diferenciadoc">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Project</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>GitHub</strong></div>
+            <a class="navbar-item" href="https://github.com/lordofthejars/diferencia">Diferencia Repository</a>
+            <a class="navbar-item" href="https://github.com/lordofthejars/diferencia/issues">Diferencia Issue Tracker</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/alexsotob">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="diferencia" data-version="0.6.0">
+  <aside class="navigation">
+    <div class="panels">
+<div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Diferencia</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction to Diferencia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="why.html">Why Diferencia</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="why.html#opendiffy">Based on OpenDiffy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Get Diferencia</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-platforms.html">System Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="installation.html">Install</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="installation.html#docker">Docker</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="run-diferencia.html">Run Diferencia</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="#modes">Running Modes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#strict">Strict</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#subset">Subset</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#noise">Noise Detection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">Https</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#mirroring">Mirroring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="prometheus.html">Prometheus</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#configuration">Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="run_docker.html">Run In Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Administration Console</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admin.html#admin-configuration">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admin.html#stats-configuration">Stats</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Experimental</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plain_text.html">Plain Text Comparision</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="what_next.html">What&#8217;s Next</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Diferencia</span>
+    <span class="version">0.6.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Diferencia</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.6.0</a>
+        </li>
+        <li class="version">
+          <a href="../0.5.0/index.html">0.5.0</a>
+        </li>
+        <li class="version">
+          <a href="../0.4.1/index.html">0.4.1</a>
+        </li>
+        <li class="version">
+          <a href="../0.4.0/index.html">0.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../0.3.0/index.html">0.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../0.2.0/index.html">0.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../0.1.0/index.html">0.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Diferencia Java</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../diferencia-java/0.6.0/index.html">0.6.0</a>
+        </li>
+        <li class="version">
+          <a href="../../diferencia-java/0.5.0/index.html">0.5.0</a>
+        </li>
+        <li class="version">
+          <a href="../../diferencia-java/0.4.0/index.html">0.4.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="index.html">Diferencia</a></li>
+    <li class="crumb"><a href="run-diferencia.html">Run Diferencia</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">0.6.0</button>
+  <div class="versions-menu">
+    <a class="version is-current" href="run-diferencia.html">0.6.0</a>
+    <a class="version" href="../0.5.0/run-diferencia.html">0.5.0</a>
+    <a class="version" href="../0.4.1/run-diferencia.html">0.4.1</a>
+    <a class="version" href="../0.4.0/run-diferencia.html">0.4.0</a>
+    <a class="version" href="../0.3.0/run-diferencia.html">0.3.0</a>
+    <a class="version" href="../0.2.0/run-diferencia.html">0.2.0</a>
+    <a class="version" href="../0.1.0/run-diferencia.html">0.1.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/lordofthejars/diferencia/blob/v0.6.0/docs/modules/ROOT/pages/run-diferencia.adoc">Edit this Page</a></div>
+</div>
+<article class="doc">
+<h1>Run Diferencia</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assumptions:</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> You&#8217;ve <a href="installation.html" class="page">installed Diferencia</a> using any of the methods explained there.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Have <code>curl</code> installed.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> You have checked that <code>curl 'http://rest.ensembl.org/info/ping' -H 'Content-type:application/json'</code> returns a JSON document.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> You have checked that <code>curl <a href="http://now.httpbin.org/" class="bare">http://now.httpbin.org/</a></code> returns a JSON document.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_starting_diferencia"><a class="anchor" href="#_starting_diferencia"></a>Starting Diferencia</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To start diferencia you only need to run next command from your terminal:</p>
+</div>
+<div class="paragraph">
+<p><code>diferencia start -c <a href="http://rest.ensembl.org" class="bare">http://rest.ensembl.org</a> -p <a href="http://rest.ensembl.org" class="bare">http://rest.ensembl.org</a></code></p>
+</div>
+<div class="paragraph">
+<p>This command just starts Diferencia proxy, configuring it to use <a href="http://rest.ensembl.org" class="bare">http://rest.ensembl.org</a> (<code>-p</code>) as the primary (<em>old version</em>) and <a href="http://rest.ensembl.org" class="bare">http://rest.ensembl.org</a> (<code>-c</code>) as the candidate (<em>new version</em>).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For sake of simplicity now both versions point to te same host, but in a real use case, hosts would be different.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Then run next <code>curl</code> command:</p>
+</div>
+<div class="paragraph">
+<p><code>curl 'http://localhost:8080/info/ping' -H 'Content-type:application/json' -i</code></p>
+</div>
+<div class="paragraph">
+<p>And the response is <code>HTTP/1.1 200 OK</code> because obviously, both are the same version so they are producing the same output.</p>
+</div>
+<div class="paragraph">
+<p>What is happening under the cover when you do that <code>curl</code> operation is that Diferencia proxy replaces the host with <em>primary</em> host and sends the request to it (<em><a href="http://rest.ensembl.org/info/ping" class="bare">http://rest.ensembl.org/info/ping</a></em>) and then do the same with the <em>candidate</em> host, sending the request to it (<em><a href="http://rest.ensembl.org/info/ping" class="bare">http://rest.ensembl.org/info/ping</a></em>).</p>
+</div>
+<div class="paragraph">
+<p>After that, both responses are compared and if they are <strong>strictly</strong> equal then an HTTP 200 OK method is returned from the proxy.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>By default Diferencia just skip any unsafe operation like <code>PUT</code>, <code>POST</code>, <code>DELETE</code> and <code>PATCH</code>, because they are not safe to run them blindly without taking into consideration their side effects.</p>
+</div>
+<div class="paragraph">
+<p>You can remove this restriction by starting Diferencia with <code>--unsafe</code> flag.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Diferencia has an endpoint at <code>/healthdif</code> that can be used to check when diferencia is ready to receive requests.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="modes"><a class="anchor" href="#modes"></a>Running Modes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the previous example, both responses must be <strong>strictly</strong> equal (this means that JSON schema and each key/value must be equal).</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">About Headers</div>
+<div class="paragraph">
+<p>By default Diferencia only takes into consideration status code and body content and headers, for example, are ignored.</p>
+</div>
+<div class="paragraph">
+<p>You can enable header verification by setting <code>--headers</code> flag.</p>
+</div>
+<div class="paragraph">
+<p>You can also set which header values should be ignored by using <code>--ignoreHeadersValues Accept, Accept-Charset</code></p>
+</div>
+<div class="paragraph">
+<p>Notice that this only apply to header value, not the key.
+So for the previous example, it is checked that both primary and candidate contains the same headers (pair key/value) but in case of <code>Accept</code> and <code>Accept-Charset</code> only it is checked that there are the keys present, but they don&#8217;t need to have the same value.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>But there are other modes that we are going to describe in next sections:</p>
+</div>
+<div class="sect2">
+<h3 id="strict"><a class="anchor" href="#strict"></a>Strict</h3>
+<div class="paragraph">
+<p><code>Strict</code> mode checks that every key/value is strictly equal.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="subset"><a class="anchor" href="#subset"></a>Subset</h3>
+<div class="paragraph">
+<p><code>Subset</code> mode checks if candidate response is a subset of primary response.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="title">V1</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">{
+    "name": "Alex",
+    "surname": "Soto"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and</p>
+</div>
+<div class="listingblock">
+<div class="title">V2</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">{
+    "name": "Alex",
+    "surname": "Soto",
+    "fullname": "Alex Soto"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>V2</code> document is a subset of <code>V1</code>, so in this case, Diferencia will say that both documents are equal.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="noise"><a class="anchor" href="#noise"></a>Noise Detection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you have Diferencia started from <a href="#_starting_diferencia">Starting Diferencia</a> section, stop it and start it again with next command:</p>
+</div>
+<div class="paragraph">
+<p><code>diferencia start -c <a href="http://now.httpbin.org/" class="bare">http://now.httpbin.org/</a> -p <a href="http://now.httpbin.org/" class="bare">http://now.httpbin.org/</a></code></p>
+</div>
+<div class="paragraph">
+<p>Now we are configuring Diferencia proxy to redirect requests to <em><a href="http://now.httpbin.org/" class="bare">http://now.httpbin.org/</a></em> which basically returns the current time.</p>
+</div>
+<div class="paragraph">
+<p>So you can run next <code>curl</code> operation:</p>
+</div>
+<div class="paragraph">
+<p><code>curl 'http://localhost:8080/' -i</code></p>
+</div>
+<div class="paragraph">
+<p>And the response is <code>HTTP/1.1 412 Precondition Failed</code>.
+This is happening because although you are sending the request to the same service, it is returning the current time which of course it is not the same in both calls.
+This thing that it is pretty obvious makes that Diferencia result is a failure, saying that both services are not compatible (so there is a regression), when the truth is that they are equally valid, but having a <strong>value</strong> different.</p>
+</div>
+<div class="paragraph">
+<p>To fix this there is a noise cancellation algorithm that detects these dynamic values and suppress them from JSON document.
+This algorithm sends the request to not two instances but three.
+Two are the old instances (<em>primary</em> and <em>secondary</em>) and one to the new instance (<em>candidate</em>).</p>
+</div>
+<div class="paragraph">
+<p>The request to <em>primary</em> and <em>seconday</em> returns a valid request (since old instances are the correct ones), then from their responses, Diferencia checks for the differences between both responses.</p>
+</div>
+<div class="paragraph">
+<p>Since both responses are valid (because the source is the same but different instances), the differences that are between them are just noise that should not take into consideration for response validation.</p>
+</div>
+<div class="paragraph">
+<p>Then detected noise is removed from <em>primary</em> and <em>candidate</em> response, and they are compared, if they are equal, then you know that everything is fine.</p>
+</div>
+<div class="paragraph">
+<p>This can be summarized in next schema:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/noise.png" alt="noise">
+</div>
+<div class="title">Figure 1. Noise Cancellation</div>
+</div>
+<div class="paragraph">
+<p>Now stop Diferencia and start it again with next command:</p>
+</div>
+<div class="paragraph">
+<p><code>diferencia start -c <a href="http://now.httpbin.org/" class="bare">http://now.httpbin.org/</a> -p <a href="http://now.httpbin.org/" class="bare">http://now.httpbin.org/</a> -s <a href="http://now.httpbin.org/" class="bare">http://now.httpbin.org/</a> -n</code></p>
+</div>
+<div class="paragraph">
+<p>You are setting URLs for <em>primary</em> (<code>-c</code>), <em>secondary</em> (<code>-s</code>), <em>candidate</em> (<code>-c</code>) and finally that you want to enable noise reduction (<code>-n</code>).</p>
+</div>
+<div class="paragraph">
+<p>Now just execute the same <code>curl</code> command as before.</p>
+</div>
+<div class="paragraph">
+<p><code>curl 'http://localhost:8080/' -i</code></p>
+</div>
+<div class="paragraph">
+<p>And now the response is totally different returning a <code>200 OK</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_manual_noise_cancellation"><a class="anchor" href="#_manual_noise_cancellation"></a>Manual Noise Cancellation</h3>
+<div class="paragraph">
+<p>Sometimes autoamtic noise cancellation is not enough.
+Usually this might happen when you have random values or when you know beforehand the fields that produces noise and you don&#8217;t want any automatic detection to save some execution time (1 extra call).</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">About Random Values</div>
+<div class="paragraph">
+<p>Suppose that you have a service where one field is a random value from 0 to 9.
+It could happen that <em>primary</em> and <em>secondary</em> field contains the same value.
+In this case this would not be considered as noise.</p>
+</div>
+<div class="paragraph">
+<p>But then <em>candidate</em> field could be a different number of the one calculated in <em>primary</em> and <em>secondary</em>.
+In this case the request would be considered failed, since there were no noise detection algorithm applied, but you as a API designer knows that this field should be considered noise.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>To avoid this problem, to flags are provided and they are enabled when <code>noisedetection (-n)</code> flag is enabled.
+These flags are <code>ignoreValues</code> and <code>ignoreValuesFile</code>.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>ignoreValues</code></dt>
+<dd>
+<p>list (in CSV) of <em>JSON</em> pointers of elements where their values should be ignored in comparision.</p>
+</dd>
+<dt class="hdlist1"><code>ignoreValuesFile</code></dt>
+<dd>
+<p>path of a file where each line is a <em>JSON</em> pointer of element where their values should be ignored in comparision.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+You need to have noise detection enabled to be able to specify manual noise cancellation.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mirroring"><a class="anchor" href="#mirroring"></a>Mirroring</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Diferencia can be started as a mirrored proxy.
+In this mode Diferencia, the output of primary call is redirected to the caller.</p>
+</div>
+<div class="paragraph">
+<p>The error is notified not as response but stored internally to be consumed by Prometheus or Rest call or UI.</p>
+</div>
+<div class="paragraph">
+<p>In this way you can use Diferencia for mirroring public traffic and checking for any regression.</p>
+</div>
+<div class="paragraph">
+<p>To enable it, you need to use <code>--mirroring</code> or <code>-m</code> as parameter.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration"><a class="anchor" href="#configuration"></a>Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In next table you can see all possible configuration arguments that you can pass to Differentia:</p>
+</div>
+<div class="sect2">
+<h3 id="_start"><a class="anchor" href="#_start"></a>start</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 41.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+<th class="tableblock halign-left valign-top">Format</th>
+<th class="tableblock halign-left valign-top">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--serviceName</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sets service name under test</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Hostname of candidate</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--primary (-p)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sets primary URL</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>&lt;mandatory&gt;</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--secondary (-s)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sets secondary URL, only valid in case of Noise Reduction</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--candidate (-c)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sets candidate URL</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>&lt;mandatory&gt;</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--noisedetection (-n)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Enable noise detection</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>false</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--difference (-d)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sets differencia mode</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strict,Subset</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Strict</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--logLevel (-l)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Set log level</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">debug, info, warn, error, fatal, panic</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>error</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--headers</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Enable Http headers comparision</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>false</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--ignoreHeadersValues</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>List of headers key where its value should be ignored for comparision purposes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CSV</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--ignoreValues</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>List of JSON Pointers of values that must be ignored for comparision purposes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CSV</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--ignoreValuesFile</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>File location where each line is a JSON pointers definition for ignoring values</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--unsafe (-u)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Allow none safe operations like PUT, POST, PATCH, ..</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>false</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--storeResults</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Directory where the output is set. If not specified then nothing is stored. Useful for local development.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--port</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sets port where the proxy is started</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>8080</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--prometheus</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Enables Prometheus endpoint</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>false</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--prometheusPort</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prometheus endpoint port</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>8081</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--adminPort</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Admin endpoint port</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>8082</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--levenshteinPercentage</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sets the minimum percentage to be equal in case of using plain text (40, 79, 90, &#8230;&#8203;)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>100</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--forcePlainText</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Force plain text comparision if <code>Content-Type</code> is not set in response</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>false</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--mirroring (-m)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Opens Diferencia in Mirroring mode which means that the output of primary is redirected to the caller. The error is notified not as response but stored internally to be consumed by Prometheus or Rest call or UI.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>false</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--returnResult</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Set Diferencia to return all avalable information about the current comparision and not only the http status code.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>false</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>
